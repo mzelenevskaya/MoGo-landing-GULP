@@ -1,0 +1,55 @@
+.design {
+    background-image: linear-gradient(360deg,
+            rgba(255, 255, 255, 0.8) 0%,
+            rgba(255, 255, 255, 0.8) 100%),
+        url("../images/dist/design/design.jpg");
+    background-size: cover, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center center;
+    padding-top: 42px;
+    padding-bottom: 57px;
+
+    @include breakpoint(lg) {
+        padding-top: 28px;
+        padding-bottom: 38px;
+    }
+
+    @include breakpoint(md) {
+        padding-top: 20x;
+        padding-bottom: 30px;
+    }
+
+    &__head {
+        margin-bottom: 60px;
+
+        @include breakpoint(lg) {
+            margin-bottom: 39px;
+        }
+
+        @include breakpoint(md) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__features {
+        @include f-center;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    &__features-tablet {
+        position: relative;
+    }
+
+    &__features-phone {
+        position: absolute;
+        top: 10%;
+        right: 5%;
+        transform: translate(50%, 50%);
+        width: 25%;
+
+        @include breakpoint(md) {
+            right: 25%;
+        }
+    }
+}

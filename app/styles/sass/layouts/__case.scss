@@ -1,0 +1,57 @@
+.case {
+    padding: 0 var(--mobile-padding);
+    background-color: #95E1D3;
+
+    &__row {
+        @include f-center;
+        flex-wrap: wrap;
+    }
+
+    &__card {
+        width: calc(100% / 5);
+        flex-shrink: 0;
+        border-right: 1px solid #ffffff;
+        border-left: 1px solid #ffffff;
+        padding: 70px 5px;
+        text-align: center;
+
+        @include breakpoint(xl) {
+            padding: 40px 5px;
+        }
+
+        @include breakpoint(md) {
+            width: calc(100% / 2);
+            border-right: none;
+            border-left: none;
+            border-bottom: 1px solid #ffffff;
+            padding: 40px 5px;
+        }
+
+        @include breakpoint(sm) {
+            padding: 30px 5px;
+        }
+    }
+
+    &__card-number {
+        font-weight: 700;
+        font-size: 64px;
+        color: #ffffff;
+        margin-bottom: 20px;
+
+        @include breakpoint(xl) {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__card-text {
+        font-weight: 700;
+        font-size: 24px;
+        color: #ffffff;
+
+        @include breakpoint(xl) {
+            font-weight: 500;
+            font-size: 18px;
+        }
+    }
+}

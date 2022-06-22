@@ -1,0 +1,28 @@
+.latest-blog {
+  background-image: linear-gradient(360deg,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0.9)),
+    url("../images/dist/latest-blog/lt-blog.png");
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center;
+  text-align: center;
+
+  @include breakpoint(sm) {
+    background-color: #ffffff;
+  }
+
+  &__head {
+    padding: 42px 0;
+
+    @include breakpoint(sm) {
+      padding-top: 29px;
+      padding-bottom: 36px;
+
+    }
+  }
+
+  &__title {
+    color: var(--accent);
+  }
+}

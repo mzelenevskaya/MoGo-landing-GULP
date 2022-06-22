@@ -1,0 +1,139 @@
+.blog {
+    padding: 84px 0;
+
+    @include breakpoint(xl) {
+        padding: 58px 0;
+    }
+
+    @include breakpoint(sm) {
+        padding: 30px 0;
+    }
+
+    &__head {
+        margin-bottom: 42px;
+    }
+
+    &__card {
+        @include breakpoint(md) {
+            margin-bottom: 50px;
+        }
+
+        @include breakpoint(sm) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__card-head {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    &__img-wrap {
+        position: relative;
+        padding-bottom: 70%;
+        overflow: hidden;
+    }
+
+    &__img {
+        /* first */
+        /* height: 253px;
+        object-position: center;
+        width: 100%;
+        object-fit: cover; */
+
+        /* second */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-height: 100%;
+        min-width: 100%;
+        max-width: initial;
+    }
+
+    &__news-date {
+        @include f-center;
+        position: absolute;
+        bottom: 25px;
+        left: -14px;
+        flex-direction: column;
+        text-align: center;
+        width: 80px;
+        height: 80px;
+        background: var(--blue);
+        color: #fff;
+        font-family: "Raleway";
+        font-size: 18px;
+        text-transform: uppercase;
+
+        @include breakpoint(xl) {
+            width: 68px;
+            height: 68px;
+            font-size: 14px;
+        }
+
+        span {
+            font-weight: 700;
+            font-size: 36px;
+            margin-bottom: 5px;
+
+            @include breakpoint(xl) {
+                font-size: 24px;
+            }
+        }
+    }
+
+    &__card-title {
+        font-family: 'Raleway';
+        font-weight: 700;
+        font-size: 24px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+
+        @include breakpoint(xl) {
+            font-size: 18px;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
+    &__card-desc {
+        font-family: 'Raleway';
+        font-weight: 400;
+        font-size: 18px;
+
+        @include breakpoint(xl) {
+            font-size: 14px;
+        }
+    }
+
+    &__info-panel {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 22px;
+    }
+
+    &__info-icon {
+        margin-right: 16px;
+        width: 32px;
+        flex-shrink: 0;
+    }
+
+    &__info-block {
+        display: flex;
+        align-items: center;
+        margin-right: 40px;
+        font-size: 13px;
+
+        @include breakpoint(xl) {
+            font-size: 12px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

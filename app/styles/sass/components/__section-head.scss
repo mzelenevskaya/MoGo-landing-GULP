@@ -1,0 +1,58 @@
+.section-head {
+    text-align: center;
+    color: var(--black);
+
+    &__subtitle {
+        font-family: "Kaushan Script";
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 1.4;
+        margin-bottom: 30px;
+        color: var(--black);
+
+        @include breakpoint(xl) {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: 900;
+        line-height: 1.2;
+        color: var(--black);
+        text-transform: uppercase;
+
+        @include breakpoint(xl) {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            width: 170px;
+            height: 4px;
+            background: var(--accent);
+            margin: 30px auto 30px;
+
+            @include breakpoint(xl) {
+                width: 148px;
+            }
+
+            @include breakpoint(sm) {
+                width: 134px;
+            }
+        }
+
+        &__text {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1.2;
+
+            @include breakpoint(md) {
+                font-size: 14px;
+            }
+        }
+    }
+}

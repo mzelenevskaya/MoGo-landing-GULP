@@ -1,0 +1,55 @@
+.survey-slide {
+    display: flex;
+    align-items: flex-start;
+
+    &__icon {
+        width: 170px;
+        flex-shrink: 0;
+        margin-right: 30px;
+
+        @include breakpoint(md) {
+            width: 100px;
+        }
+
+        @include breakpoint(sm) {
+            display: none;
+        }
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.2;
+        color: var(--grey);
+        margin-bottom: 25px;
+        font-style: italic;
+
+        @include breakpoint(xl) {
+            font-size: 18px;
+        }
+    }
+
+    &__author {
+        font-family: 'Kaushan Script';
+        font-size: 30px;
+
+        @include breakpoint(xl) {
+            font-size: 24px;
+        }
+
+        &::before {
+            content: "";
+            display: inline-block;
+            margin-right: 56px;
+            width: 70px;
+            height: 4px;
+            background: var(--accent);
+            vertical-align: middle;
+
+            @include breakpoint(xl) {
+                width: 47px;
+                margin-right: 37px;
+            }
+        }
+    }
+}

@@ -1,0 +1,119 @@
+.team {
+    padding-top: 84px;
+    padding-bottom: 84px;
+
+    @include breakpoint(xl) {
+        padding-top: 58px;
+        padding-bottom: 58px;
+    }
+
+    @include breakpoint(lg) {
+        padding-top: 45px;
+    }
+
+    @include breakpoint(sm) {
+        padding-top: 27px;
+    }
+
+    &__head {
+        margin-bottom: 88px;
+
+        @include breakpoint(xl) {
+            margin-bottom: 50px;
+        }
+
+        @include breakpoint(lg) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__card {
+
+        @include breakpoint(md) {
+            margin-bottom: 31px;
+        }
+
+        &:last-child {
+            @include breakpoint(md) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__thumb {
+        position: relative;
+        margin-bottom: 28px;
+    }
+
+    &__img {
+        position: relative;
+        padding-bottom: 135%;
+        overflow: hidden;
+
+        @include breakpoint(md) {
+            padding-bottom: 100%;
+        }
+    }
+
+    &__img-main {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-height: 100%;
+        min-width: 100%;
+        max-width: initial;
+    }
+
+    &__overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(360deg,
+                rgba(237, 215, 137, 0.9) 0%,
+                rgba(233, 130, 131, 0.9) 100%);
+        transform: translate(-16px, -16px);
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+
+        @include breakpoint(xl) {
+            transform: translate(-3px, -3px);
+        }
+
+        &:hover {
+            opacity: 1;
+            transition: 0.3s;
+        }
+    }
+
+    &__overlay-list {
+        @include f-center;
+        align-content: center;
+    }
+
+    &__info {
+        text-align: center;
+    }
+
+    &__info-name {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        margin-bottom: 28px;
+
+        @include breakpoint(xl) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__info-position {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.2;
+        text-transform: uppercase;
+    }
+}

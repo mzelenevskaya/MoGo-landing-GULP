@@ -1,0 +1,58 @@
+:root {
+    --black: #2D3033;
+    --accent: #F38281;
+    --blue: #95E1D3;
+    --grey: #C6CBCD;
+    --content-width: 1170px;
+    --mobile-padding: 15px;
+    --gutter: 15px;
+}
+
+@include breakpoint(xl) {
+    :root {
+        --gutter: 10px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--black);
+}
+
+body {
+    margin: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.splide__list {
+    transition: 0.3s;
+
+    &:hover {
+        transition: none;
+    }
+}

@@ -1,0 +1,99 @@
+.promo {
+    padding-top: 177px;
+    padding-bottom: 50px;
+    min-height: 100vh;
+    background-image: linear-gradient(360deg,
+            rgba(237, 215, 137, 0.9) 0%,
+            rgba(233, 130, 131, 0.9) 100%),
+        url("../images/dist/promo/promobg.jpg");
+    background-size: cover, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center center;
+    text-align: center;
+    color: #ffffff;
+
+    @include breakpoint(xl) {
+        padding-top: 100px;
+    }
+
+    @include breakpoint(md) {
+        padding-top: 90px;
+    }
+
+    &__subtitle {
+        font-family: "Kaushan Script", cursive;
+        font-weight: 400;
+        font-size: 4.5vw;
+        line-height: 1.2;
+    }
+
+    &__title {
+        font-family: "Montserrat";
+        font-weight: 700;
+        font-size: 9.5vw;
+        line-height: 1.2;
+        text-transform: uppercase;
+        margin-bottom: 74px;
+
+        @include breakpoint(xl) {
+            margin-bottom: 50px;
+        }
+
+        @include breakpoint(md) {
+            margin-bottom: 77px;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            width: 170px;
+            height: 4px;
+            background: #ffffff;
+            margin: 44px auto 0;
+
+            @include breakpoint(xl) {
+                margin: 29px auto 0;
+                width: 115px;
+            }
+
+            @include breakpoint(md) {
+                margin: 77px auto 0;
+                width: 134px;
+            }
+
+
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 23px 105px;
+        color: inherit;
+        border: 4px solid #ffffff;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 24px;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: 0.3s;
+        margin-bottom: 116px;
+
+        @include breakpoint(xl) {
+            padding: 18px 80px;
+            margin-bottom: 79px;
+        }
+
+        @include breakpoint(md) {
+            margin-bottom: 60px;
+        }
+
+        @include breakpoint(sm) {
+            margin-bottom: 54px;
+        }
+
+        &:hover {
+            background-color: #ffffff;
+            color: #f4bf87;
+        }
+    }
+}

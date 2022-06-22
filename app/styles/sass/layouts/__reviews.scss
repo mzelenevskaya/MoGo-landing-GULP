@@ -1,0 +1,123 @@
+.reviews {
+    background-image: linear-gradient(360deg,
+            rgba(255, 255, 255, 0.9) 0%,
+            rgba(255, 255, 255, 0.9) 100%),
+        url("../images/dist/reviews/reviews.jpg");
+    background-size: cover, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center center;
+    padding-top: 42px;
+
+    @include breakpoint(xl) {
+        padding-top: 28px;
+    }
+
+    &__head {
+        margin-bottom: 42px;
+
+        @include breakpoint(xl) {
+            margin-bottom: 28px;
+        }
+    }
+
+    &__row {
+        @include f-center;
+        flex-wrap: wrap;
+    }
+
+    &__card {
+        @include f-center;
+        margin-bottom: 42px;
+        margin-top: 42px;
+
+        @include breakpoint(xl) {
+            margin-bottom: 28px;
+            margin-top: 28px;
+        }
+
+        @include breakpoint(sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__card-icon {
+        flex-shrink: 0;
+        align-self: flex-start;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        margin: 0 auto;
+        overflow: hidden;
+
+        @include breakpoint(xl) {
+            width: 88px;
+            height: 88px;
+        }
+
+        @include breakpoint(sm) {
+            align-self: center;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__card-info {
+        margin-left: 50px;
+
+        @include breakpoint(sm) {
+            text-align: center;
+            margin-left: 0;
+        }
+    }
+
+    &__card-name {
+        font-weight: 700;
+        font-size: 24px;
+        text-transform: uppercase;
+        padding: 14px 0;
+
+        @include breakpoint(xl) {
+            font-size: 18px;
+            padding: 9px 0;
+        }
+    }
+
+    &__card-position {
+        font-weight: 400;
+        font-size: 18px;
+        text-transform: uppercase;
+
+        @include breakpoint(xl) {
+            font-size: 14px;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 70px;
+            height: 2px;
+            background-color: var(--accent);
+            margin: 32px 0;
+
+            @include breakpoint(xl) {
+                width: 42px;
+                margin: 21px 0;
+            }
+
+            @include breakpoint(sm) {
+                width: 134px;
+                margin: 21px auto;
+            }
+        }
+    }
+
+    &__card-feedback {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.3;
+
+        @include breakpoint(xl) {
+            font-size: 14px;
+            line-height: 1.1;
+        }
+    }
+}

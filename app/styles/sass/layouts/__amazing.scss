@@ -1,0 +1,71 @@
+.amazing {
+        padding-top: 50px;
+        padding-bottom: 20px;
+
+        @include breakpoint(xl) {
+                padding-top: 28px;
+                padding-bottom: 28px;
+        }
+
+        &__head {
+                margin-bottom: 10px;
+
+                @include breakpoint(xl) {
+                        margin-bottom: 40px;
+                }
+        }
+
+        &__card {
+                display: flex;
+                margin-bottom: 70px;
+                margin-top: 70px;
+
+                @include breakpoint(xl) {
+                        margin-bottom: 30px;
+                        margin-top: 30px;
+                }
+
+                @include breakpoint(sm) {
+                        margin-bottom: 16px;
+                        margin-top: 16px;
+                }
+        }
+
+        &__card-img {
+                width: 70px;
+                flex-shrink: 0;
+                align-self: flex-start;
+
+                @include breakpoint(xl) {
+                        width: 60px;
+                }
+        }
+
+        &__card-info {
+                padding-left: 30px;
+
+                @include breakpoint(lg) {
+                        padding-left: 25px;
+                }
+        }
+
+        &__card-name {
+                padding: 10px 0;
+                font-weight: 700;
+                font-size: 24px;
+                text-transform: uppercase;
+
+                @include breakpoint(xl) {
+                        font-size: 18px;
+                }
+        }
+
+        &__card-desc {
+                font-size: 18px;
+                padding: 5px 0;
+
+                @include breakpoint(xl) {
+                        font-size: 14px;
+                }
+        }
+}

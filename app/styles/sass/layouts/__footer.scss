@@ -1,0 +1,118 @@
+.footer {
+    padding-top: 80px;
+
+    &__col {
+        padding-bottom: 42px;
+    }
+
+    &__media-col {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__desc {
+        font-size: 18px;
+        color: var(--grey);
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    &__followers-count {
+        margin-bottom: 30px;
+
+        .num {
+            font-size: 36px;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .letter {
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .cta-txt {
+            font-size: 18px;
+            font-weight: 500;
+            font-style: italic;
+            text-transform: uppercase;
+        }
+    }
+
+    &__socials {
+        @include f-center;
+        margin-bottom: 15px;
+    }
+
+    &__media-cta {
+        padding-right: 10px;
+        font-size: 13px;
+        font-style: italic;
+    }
+
+    &__social-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &__social-item {
+        margin-right: 10px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__social-icon {
+        width: 24px;
+    }
+
+    &__subscribe {
+        display: flex;
+        margin-top: auto;
+    }
+
+    &__send-form {
+        text-transform: uppercase;
+        padding: 16px 16px;
+    }
+
+    &__input {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    &__col-title {
+        font-weight: 700;
+        font-size: 24px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    &__news-card {
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__see-more {
+        display: inline-block;
+        font-size: 13px;
+        text-decoration: underline;
+        text-transform: uppercase;
+        color: var(--black);
+        margin-top: 40px;
+    }
+
+    &__copyright {
+        font-size: 13px;
+        font-weight: 700;
+        padding: 15px 0;
+        text-align: center;
+        border-top: 1px solid var(--grey);
+    }
+}

@@ -1,0 +1,11 @@
+.form-input {
+    padding: 10px 15px;
+    border: 1px solid var(--grey);
+    background-color: #fff;
+    font-size: 18px;
+    width: 100%;
+
+    &::placeholder {
+        color: var(--grey);
+    }
+}
