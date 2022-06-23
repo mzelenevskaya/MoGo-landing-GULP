@@ -45,30 +45,22 @@
         }
     }
 
-    &__info {
-        display: flex;
-        flex-direction: column;
+    &__item {
+        border: 1px solid var(--grey);
         margin-bottom: 22px;
-
-        @include breakpoint(md) {
-            margin-bottom: 19px;
-        }
 
         &:last-child {
             margin-bottom: 0;
         }
     }
 
-    &__info-wrapper {
+    &__info {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        border: 1px solid var(--grey);
+        border-bottom: 1px solid var(--grey);
+        transform: translateY(1px);
         padding: 28px 20px;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
     }
 
     &__info-img {
@@ -90,58 +82,39 @@
     &__info-icon {
         margin-left: auto;
 
-        &:hover {
+        &:active {
             transform: rotate(180deg);
         }
     }
 
-    &__info-overlay {
-        display: none;
-    }
-
-    &__info:hover &__info-overlay {
-        display: block;
+    &__description {
+        max-height: 0;
         overflow-y: hidden;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        border: 1px solid var(--grey);
-
-        @include breakpoint(md) {
-            padding-top: 17px;
-            padding-bottom: 17px;
-        }
-
-        @include breakpoint(sm) {
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
+        transition: all 300ms ease;
     }
 
-    &__info:hover &__info-overlay &__info-overlay-text {
-        display: block;
-        max-height: 163px;
-        overflow: hidden auto;
-        padding-left: 22px;
-        padding-right: 54px;
-        padding-top: 20px;
 
-        @include breakpoint(md) {
-            max-height: 138px;
-            padding-right: 45px;
-            padding-top: 20px;
-        }
-    }
-
-    &__info-overlay-text {
+    &__description-text {
         display: block;
         font-weight: 400;
         font-size: 18px;
         line-height: 1.2;
         margin-right: 24px;
+        padding-top: 20px;
         padding-bottom: 20px;
+        padding-left: 22px;
+        padding-right: 54px;
+        overflow-y: scroll;
+        height: 163px;
+
+
+        @include breakpoint(md) {
+            height: 140px;
+        }
 
         @include breakpoint(sm) {
             font-size: 16px;
+            height: 138px;
         }
 
         &::-webkit-scrollbar {

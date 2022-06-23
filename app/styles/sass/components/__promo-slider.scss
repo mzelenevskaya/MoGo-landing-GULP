@@ -1,20 +1,11 @@
-.header-slider {
+.promo-slider {
 
     position: relative;
     margin-bottom: 28px;
 
-    @include breakpoint(md) {
-        padding: 0 50px;
-    }
 
-    @include breakpoint(sm) {
-        padding: 0;
-    }
-
-    &__arrow {
-        @include breakpoint(xl) {
-            display: none;
-        }
+    &__arrow {        
+            display: none;        
     }
 
     &__pagination {

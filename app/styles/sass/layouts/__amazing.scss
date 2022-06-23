@@ -25,6 +25,11 @@
                         margin-top: 30px;
                 }
 
+                @include breakpoint(lg) {
+                        margin-bottom: 25px;
+                        margin-top: 25px;
+                }
+
                 @include breakpoint(sm) {
                         margin-bottom: 16px;
                         margin-top: 16px;
