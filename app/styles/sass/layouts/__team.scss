@@ -83,6 +83,13 @@
             transform: translate(-3px, -3px);
         }
 
+        @include breakpoint(sm) {
+            transform: translate(0, 0);
+            background: none;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+
         &:hover {
             opacity: 1;
             transition: 0.3s;

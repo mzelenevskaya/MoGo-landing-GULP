@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		headerNav.classList.toggle("header__nav_opened");
 	});
 
-
 	// accordion
 	const accordionBtns = document.querySelectorAll(".service__info");
 
@@ -34,9 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
 			let content = this.nextElementSibling;
 			console.log(content);
 
-			if (content.style.maxHeight) {				
+			if (content.style.maxHeight) {
 				content.style.maxHeight = null;
-			} else {				
+			} else {
 				content.style.maxHeight = content.scrollHeight + "px";
 				console.log(content.style.maxHeight);
 			}
@@ -68,8 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	const promoSlides = document.querySelectorAll(`[data-slide-title]`);
 	let slideTitles = [];
 
-	promoSlides.forEach(function(slide){
-		slideTitles.push(slide.dataset.slideTitle);	
+	promoSlides.forEach(function (slide) {
+		slideTitles.push(slide.dataset.slideTitle);
 	});
 
 	const promoSlider = new Splide('.promo__slider', {
@@ -81,18 +80,16 @@ document.addEventListener('DOMContentLoaded', () => {
 		classes: {
 			pagination: 'splide__pagination promo__pagination',
 		},
-	
+
 	});
 
+	promoSlider.on('pagination:mounted', function (data) {
+		data.list.classList.add('splide__pagination--custom');
 
-	promoSlider.on( 'pagination:mounted', function ( data ) {
-		data.list.classList.add( 'splide__pagination--custom' );
-	  
-		data.items.forEach( function ( item ) {
-		  item.button.textContent = `${slideTitles[item.page]}`;
-		} );
-	  } );
-	  
-	  promoSlider.mount();
+		data.items.forEach(function (item) {
+			item.button.textContent = `${slideTitles[item.page]}`;
+		});
+	});
+	promoSlider.mount();
 
 })

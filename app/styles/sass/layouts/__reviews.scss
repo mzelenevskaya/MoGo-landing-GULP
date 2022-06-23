@@ -12,6 +12,13 @@
         padding-top: 28px;
     }
 
+    @include breakpoint(sm) {
+        background-image: linear-gradient(360deg,
+                rgba(255, 255, 255, 0.9) 0%,
+                rgba(255, 255, 255, 0.9) 100%),
+            url("../images/dist/reviews/reviews-sm.jpg");
+    }
+
     &__head {
         margin-bottom: 42px;
 
@@ -37,6 +44,11 @@
 
         @include breakpoint(sm) {
             flex-direction: column;
+            margin-bottom: 29px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 
