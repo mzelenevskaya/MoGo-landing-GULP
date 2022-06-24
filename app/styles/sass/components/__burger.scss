@@ -10,6 +10,24 @@
     padding: 0;
     border: none;
 
+    &_closed {
+
+        .burger__line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burger__line:first-child {
+            top: calc(50% - 1.5px);
+            transform: rotate(45deg);
+
+        }
+
+        .burger__line:last-child {
+            bottom: calc(50% - 1.5px);
+            transform: rotate(-45deg);
+        }
+    }
+
     &__line {
         position: absolute;
         display: block;
@@ -17,6 +35,7 @@
         height: 3px;
         background-color: #FFFFFF;
         left: 0;
+        transition: 0.3s;
     }
 
     &__line_first {
@@ -25,7 +44,7 @@
 
     &__line_second {
         top: 50%;
-        transform: translateY(-50%);
+        transform: calc(50% - 1.5px);
     }
 
     &__line_third {
