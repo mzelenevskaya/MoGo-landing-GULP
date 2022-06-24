@@ -76,12 +76,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		arrows: false,
 		drag: false,
 		autoplay: true,
-		interval: 1000,
-		perPage: 1,
-		padding: {
-			right: '10%',
-			left: 0,
-		},
+		// interval: 1000,
+		// perPage: 1,
+		// padding: {
+		// 	right: '10%',
+		// 	left: 0,
+		// },
 
 		classes: {
 			pagination: 'splide__pagination promo__pagination',
