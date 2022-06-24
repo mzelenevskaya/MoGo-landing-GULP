@@ -34,17 +34,6 @@
         }
     }
 
-    &__card-img {
-        min-height: 100%;
-        min-width: 100%;
-        object-fit: cover;
-
-        @include breakpoint(md) {
-            min-width: 100%;
-            min-height: 40%;
-        }
-    }
-
     &__item {
         border: 1px solid var(--grey);
         margin-bottom: 22px;
@@ -131,12 +120,7 @@
         }
 
         &::-webkit-scrollbar-track-piece:end {
-            margin-bottom: 68px;
-            background: transparent;
-
-            @include breakpoint(md) {
-                margin-bottom: 57px;
-            }
+            background: transparent;            
         }
     }
 }
